@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "e306538d-ad54-45b7-8cdf-c99bfc38418f",
+		"name": "PA4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32456037"
+	},
+	"item": [
+		{
+			"name": "Add Course CS 1998",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"CS1998\",\n    \"name\": \"Intro to Backend Development\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/courses/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Course CS 2110",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"CS2110\",\n    \"name\": \"OOP & Data Structures\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/courses/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/courses/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User Raahi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Raahi Menon\",\n    \"netid\": \"rm834\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user Raahi (no courses)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/users/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course CS 2110",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/courses/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Raahi to CS 1998 Instructor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"type\": \"instructor\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/courses/1/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User James",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"James Buchanan\",\n    \"netid\": \"jb238\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add James to CS 1998 Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 2,\n    \"type\": \"student\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/courses/1/add"
+			},
+			"response": []
+		},
+		{
+			"name": "Create an assignment for a course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"PA4\",\n    \"due_date\": 1553354209 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/courses/1/assignment/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All info Course 1998",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get user James",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/users/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Reset tables (for graders' use)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/reset/"
+			},
+			"response": []
+		}
+	]
+}
